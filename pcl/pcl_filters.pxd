@@ -347,6 +347,11 @@ cdef extern from "pcl/filters/bilateral.h" namespace "pcl":
         # void setSearchMethod (const KdTreePtr &tree)
 
 
+ctypedef BilateralFilter[cpp.PointXYZ] BilateralFilter_t
+ctypedef BilateralFilter[cpp.PointXYZI] BilateralFilter_PointXYZI_t
+ctypedef BilateralFilter[cpp.PointXYZRGB] BilateralFilter_PointXYZRGB_t
+ctypedef BilateralFilter[cpp.PointXYZRGBA] BilateralFilter_PointXYZRGBA_t
+
 ###
 
 # clipper3D.h
