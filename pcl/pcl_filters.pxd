@@ -346,7 +346,6 @@ cdef extern from "pcl/filters/bilateral.h" namespace "pcl":
         # * \param[in] tree a pointer to the spatial search object.
         # void setSearchMethod (const KdTreePtr &tree)
 
-
 ctypedef BilateralFilter[cpp.PointXYZ] BilateralFilter_t
 ctypedef BilateralFilter[cpp.PointXYZI] BilateralFilter_PointXYZI_t
 ctypedef BilateralFilter[cpp.PointXYZRGB] BilateralFilter_PointXYZRGB_t

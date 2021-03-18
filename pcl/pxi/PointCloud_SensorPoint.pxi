@@ -304,6 +304,12 @@ cdef class PointCloud2:
         cdef pcl_fil.VoxelGrid_t *cfil = <pcl_fil.VoxelGrid_t *>fil.me
         cfil.setInputCloud(<cpp.shared_ptr[cpp.PointCloud2[cpp.PointXYZ]]> self.thisptr_shared)
         return fil
+  
+    def make_bilateral_filter(self):
+        fil =  BilateralFilter()
+        cdef pcl_fil.BilateralFilter_t *cfil = <pcl_fil.BilateralFilter_t *>fil.me
+        cfil.setInputCloud(<cpp.shared_ptr[cpp.PointCloud2[cpp.PointXYZ]]> self.thisptr_shared)
+        return fil 
 
     def make_passthrough_filter(self):
         """

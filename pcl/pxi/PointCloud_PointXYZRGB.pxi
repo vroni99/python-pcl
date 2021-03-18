@@ -319,6 +319,12 @@ cdef class PointCloud_PointXYZRGB:
         cfil.setInputCloud(<cpp.shared_ptr[cpp.PointCloud[cpp.PointXYZRGB]]> self.thisptr_shared)
         return fil
 
+    def make_bilateral_filter(self):
+        fil =  BilateralFilter_PointXYZRGB()
+        cdef pcl_fil.BilateralFilter_PointXYZRGB_t *cfil = <pcl_fil.BilateralFilter_PointXYZRGB_t *>fil.me
+        cfil.setInputCloud(<cpp.shared_ptr[cpp.PointCloud[cpp.PointXYZRGB]]> self.thisptr_shared)
+        return fil 
+
     def make_passthrough_filter(self):
         """
         Return a pcl.PassThroughFilter object with this object set as the input-cloud

@@ -327,6 +327,12 @@ cdef class PointCloud:
         cfil.setInputCloud(<cpp.shared_ptr[cpp.PointCloud[cpp.PointXYZ]]> self.thisptr_shared)
         return fil
 
+    def make_bilateral_filter(self):
+        fil =  BilateralFilter()
+        cdef pcl_fil.BilateralFilter_t *cfil = <pcl_fil.BilateralFilter_t *>fil.me
+        cfil.setInputCloud(<cpp.shared_ptr[cpp.PointCloud[cpp.PointXYZ]]> self.thisptr_shared)
+        return fil 
+
     def make_ApproximateVoxelGrid(self):
         """
         Return a pcl.ApproximateVoxelGrid object with this object set as the input-cloud

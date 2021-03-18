@@ -14,6 +14,7 @@ include "Filters/StatisticalOutlierRemovalFilter_180.pxi"
 include "Filters/VoxelGridFilter_180.pxi"
 include "Filters/PassThroughFilter_180.pxi"
 include "Filters/ApproximateVoxelGrid_180.pxi"
+include "Filters/BilateralFilter_180.pxi"
 # Kdtree
 # same 1.6 to 1.8
 # include "KdTree/KdTree.pxi"
