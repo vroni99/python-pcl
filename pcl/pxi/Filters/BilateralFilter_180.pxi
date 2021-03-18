@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 cimport pcl_defs as cpp
-cimport pcl_filters as pcl_fil
+cimport pcl_filters_180 as pcl_fil
 
 cdef class BilateralFilter:
     """
